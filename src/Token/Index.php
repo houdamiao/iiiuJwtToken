@@ -24,6 +24,6 @@ class Index
     }
     public function __call($name, $arguments)
     {
-        return $this->make($name,$arguments);
+        return $this->make($name,...$arguments);
     }
 }
