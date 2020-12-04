@@ -27,7 +27,6 @@ class Application
     
     public static function __callStatic($name, $arguments)
     {
-        var_dump($name);
         return self::make($name);
     }
 }
