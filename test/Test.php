@@ -5,8 +5,7 @@
  * Date: 2020/12/3
  * Time: 17:06
  */
-namespace iiiuJwtToken;
-
+namespace iiiuToken;
 require_once "../vendor/autoload.php";
 
 $a = Application::Token()->Jwt();

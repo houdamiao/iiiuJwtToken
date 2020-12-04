@@ -19,7 +19,7 @@ class Index
     {
     }
     public function make($name,$arguments){
-        $app = "\\iiiuJwtToken\\Token\\{$name}";
+        $app = "\\iiiuToken\\Token\\{$name}";
         return new $app($arguments);
     }
     public function __call($name, $arguments)

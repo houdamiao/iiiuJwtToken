@@ -21,12 +21,13 @@ class Application
     }
     
     public static function make($name){
-        $app = "\\iiiuJwtToken\\{$name}\\Index";
+        $app = "\\iiiuToken\\{$name}\\Index";
         return new $app();
     }
     
     public static function __callStatic($name, $arguments)
     {
+        var_dump($name);
         return self::make($name);
     }
 }
