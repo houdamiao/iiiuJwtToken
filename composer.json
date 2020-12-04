@@ -1,0 +1,11 @@
+{
+    "name": "miao/iiiu-jwt-token",
+    "description": "test",
+    "authors": [
+        {
+            "name": "Houdamiao",
+            "email": "183851258@qq.com"
+        }
+    ],
+    "require": {}
+}
