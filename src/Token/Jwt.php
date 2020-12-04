@@ -6,7 +6,7 @@
  * Time: 17:43
  */
 
-namespace iiiuJwtToken\Token;
+namespace iiiuToken\Token;
 
 /**
  * Class Jwt

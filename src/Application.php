@@ -6,12 +6,12 @@
  * Time: 16:51
  */
 
-namespace iiiuJwtToken;
+namespace iiiuToken;
 
 /**
  * Class Application
  * @package iiiuJwtToken
- * @method \iiiuJwtToken\Token\Index Index()
+ * @method \iiiuToken\Token\Index Index()
  */
 class Application
 {
