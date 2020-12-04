@@ -16,7 +16,6 @@
         "phpunit/phpunit": "~4.8"
     },
     "require": {
-        "php": "^7.2"
     },
-    "license": "MIT"
+    "license": "1"
 }
