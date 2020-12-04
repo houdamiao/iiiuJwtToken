@@ -10,8 +10,7 @@ namespace iiiuJwtToken\Token;
 
 /**
  * Class Index
- * @package iiiuJwtToken\Token
- * @property \iiiuJwtToken\Token\Jwt;
+ * @package iiiuJwtToken\Token\Index
  */
 class Index
 {
@@ -19,12 +18,12 @@ class Index
     public function __construct()
     {
     }
-    public function make($name){
+    public function make($name,$arguments){
         $app = "\\iiiuJwtToken\\Token\\{$name}";
-        return new $app();
+        return new $app($arguments);
     }
     public function __call($name, $arguments)
     {
-        return $this->make($name);
+        return $this->make($name,$arguments);
     }
 }

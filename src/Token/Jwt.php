@@ -23,6 +23,13 @@ class Jwt
     
     protected static $key = "123123";
     
+    public function __construct($key='')
+    {
+        if(!empty($key)){
+            self::$key=$key;
+        }
+    }
+    
     public static function getToken(array $param) : string
     {
         $header64Encode = self::base64Encode(json_encode(self::$header,JSON_UNESCAPED_UNICODE));
