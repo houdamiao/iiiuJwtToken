@@ -73,7 +73,7 @@ class Jwt
         return base64_decode(strtr($input,"-","+/"));
     }
     
-    public function handle($str){
+    public static function handle($str){
         $strlen = strlen($str);
         $len = ceil($strlen / 2);
         $len = $len+($strlen % 2);
