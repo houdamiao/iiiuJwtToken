@@ -60,14 +60,26 @@ class Jwt
     
     
     public static function base64Encode(string $input){
-        return str_replace("=",'',strtr(base64_encode($input),'+/','-'));
+        return self::handle(str_replace("=",'',strtr(base64_encode($input),'+/','-')));
+        
     }
     
     public static function base64Decode(string $input){
+        $input = self::handle($input);
         $len = strlen($input);
         if($len > 1){
             $input.=str_repeat("=",4-($len % 4));
         }
         return base64_decode(strtr($input,"-","+/"));
+    }
+    
+    public function handle($str){
+        $strlen = strlen($str);
+        $len = ceil($strlen / 2);
+        $len = $len+($strlen % 2);
+        $strOne = strrev(substr($str,0,$len));
+        $strTwo = strrev(substr($str,$len));
+        $str= $strOne.$strTwo;
+        return $str;
     }
 }
